@@ -22,9 +22,6 @@ const randomLetters = "abcdefghilmnopqrstuvz";
 
 
 const newArr = arrayObj.map((a) => ({ ...a }));
-
-
-
 newArr.forEach(e => e.position = randomLetters[Math.floor(Math.random()*randomLetters.length)]);
 
 console.log(arrayObj);

@@ -14,21 +14,30 @@ let bici = [
   },
   {
     nome: "Electric-Bike",
-    peso: 10,
+    peso: 1,
   },
 ];
 
 
-let [peso, peso2, peso3] = bici.map((item) => item.peso);
+// let [peso, peso2, peso3] = bici.map((item) => item.peso);
 
-let minor = (a, b, c) => {
-  let min = Math.min(a, b, c);
-  return min;
-}
+// const minor = (...args) => {
+//   let min = Math.min(args);
+//   return min;
+// }
 
-smallBike = bici.filter((item) => item.peso == minor(peso, peso2, peso3))
-console.log(smallBike);
+// let smallBike = bici.filter((item) => item.peso == minor(peso, peso2, peso3))
+// console.log(smallBike);
 
 
 
-console.log(`La bici con peso minore è ${smallBike[0].nome} con un peso di ${smallBike[0].peso}` )
+// console.log(`La bici con peso minore è ${smallBike[0].nome} con un peso di ${smallBike[0].peso}` )
+
+bici.sort((a, b) => a.peso - b.peso);
+
+let [smallBike] = bici;
+console.log(smallBike)
+
+console.log(
+  `La bici più leggera è ${smallBike.nome} con un peso di ${smallBike.peso}`
+);

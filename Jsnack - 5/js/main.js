@@ -10,11 +10,11 @@ const maxLength = myArray.length;
 
 
 
-let firstNum = prompt(`Inserisci un numero tra 0 e ${maxLength}`);
-let secondNum = prompt(`Inserisci un numero tra 0 e ${maxLength}`);
+let min = prompt(`Inserisci un numero tra 0 e ${maxLength}`);
+let max = prompt(`Inserisci un numero tra 0 e ${maxLength}`);
 
 
-const newArray = myArray.filter((e, i) => i > firstNum && i < secondNum)
+const newArray = myArray.filter((e, i) => i > min && i < max)
 
 
 console.log(myArray);
