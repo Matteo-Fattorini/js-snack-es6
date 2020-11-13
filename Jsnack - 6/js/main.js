@@ -19,10 +19,16 @@ const arrayObj = [
 
 const randomLetters = "abcdefghilmnopqrstuvz";
 
+// let newArray = arrayObj.map(element =>  {
+//   element.position = randomLetters[Math.floor(Math.random()*randomLetters.length)];
+//   return element
+// })
 
 
-const newArr = arrayObj.map((a) => ({ ...a }));
-newArr.forEach(e => e.position = randomLetters[Math.floor(Math.random()*randomLetters.length)]);
+// console.log (newArray)
+
+const newArr = arrayObj.map((a) => ({ ...a, position: randomLetters[Math.floor(Math.random()*randomLetters.length)] }));
+// newArr.forEach(e => e.position = randomLetters[Math.floor(Math.random()*randomLetters.length)]);
 
 console.log(arrayObj);
 console.log(newArr);
